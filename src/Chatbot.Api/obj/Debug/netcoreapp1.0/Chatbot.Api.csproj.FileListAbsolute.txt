@@ -1,0 +1,6 @@
+C:\workspace\chatbot\src\Chatbot.Api\bin\Debug\netcoreapp1.0\Chatbot.Api.dll
+C:\workspace\chatbot\src\Chatbot.Api\bin\Debug\netcoreapp1.0\Chatbot.Api.pdb
+C:\workspace\chatbot\src\Chatbot.Api\obj\Debug\netcoreapp1.0\Chatbot.Api.csprojResolveAssemblyReference.cache
+C:\workspace\chatbot\src\Chatbot.Api\obj\Debug\netcoreapp1.0\Chatbot.Api.AssemblyInfo.cs
+C:\workspace\chatbot\src\Chatbot.Api\obj\Debug\netcoreapp1.0\Chatbot.Api.dll
+C:\workspace\chatbot\src\Chatbot.Api\obj\Debug\netcoreapp1.0\Chatbot.Api.pdb
