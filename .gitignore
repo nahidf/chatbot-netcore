@@ -1,0 +1,12 @@
+artifacts
+[Bb]in/
+[Oo]bj/
+packages
+.vs
+
+*.suo
+*.user
+
+*.sln.ide
+*.TMP
+.nuget/NuGet.exe
