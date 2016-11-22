@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Chatbot.Api.Controllers;
 
 namespace Chatbot.Api
 {
@@ -29,6 +30,12 @@ namespace Chatbot.Api
         {
             // Add framework services.
             services.AddMvc();
+
+            services.AddTransient<TwilioService>();
+            services.AddTransient<WitService>();
+
+            services.Configure<SmsSettings>(Configuration.GetSection("SmsSettings"));
+            services.Configure<AiSettings>(Configuration.GetSection("AiSettings"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

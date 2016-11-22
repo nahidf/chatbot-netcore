@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Chatbot.Api.Models
 {
@@ -10,9 +6,6 @@ namespace Chatbot.Api.Models
     {
         [Required]
         public string PhoneNumber { get; set; }
-
-        [Required]
-        public string Language { get; set; }
 
         [Required]
         public string Message { get; set; }
