@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json.Linq;
 
-namespace Chatbot.Api.Controllers
+namespace Chatbot.Api.Models
 {
     public class WitEntity
     {

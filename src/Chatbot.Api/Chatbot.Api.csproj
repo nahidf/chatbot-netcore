@@ -52,4 +52,7 @@
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Content Remove="appsettings.production.json" />
+  </ItemGroup>
 </Project>

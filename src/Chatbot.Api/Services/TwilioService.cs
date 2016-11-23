@@ -5,8 +5,9 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Collections.Generic;
 using Microsoft.Extensions.Options;
+using Chatbot.Api.Models;
 
-namespace Chatbot.Api.Controllers
+namespace Chatbot.Api.Services
 {
     public class TwilioService
     {

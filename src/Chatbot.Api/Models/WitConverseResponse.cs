@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace Chatbot.Api.Controllers
+namespace Chatbot.Api.Models
 {
     public class WitConverseResponse
     {

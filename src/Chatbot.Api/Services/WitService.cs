@@ -6,10 +6,10 @@ using System.Text;
 using System.Collections.Generic;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
+using Chatbot.Api.Models;
 
-namespace Chatbot.Api.Controllers
+namespace Chatbot.Api.Services
 {
-
     public class WitService
     {
         private AiSettings _aiSettings;
@@ -19,7 +19,7 @@ namespace Chatbot.Api.Controllers
             _aiSettings = aiSettings.Value;
         }
 
-        public async Task<string> ConverseAsync(string message)
+        public async Task<string> ConverseAsync(string message, Func<string, Dictionary<string, string>> getContext)
         {
             var messageId = Guid.NewGuid().ToString();
             var converseResponse = await ConverseAsync(messageId, message, null).ConfigureAwait(false);
@@ -34,21 +34,7 @@ namespace Chatbot.Api.Controllers
                     case WitResponseTypes.Message:
                         return converseResponse.msg;
                     case WitResponseTypes.Action:
-                        var actionName = converseResponse.action;
-                        Dictionary<string, string> context = null;
-                        if (actionName == "GetRemainingPayments")
-                        {
-                            context = new Dictionary<string, string> {
-                                { "number-of-payments", 20.ToString() },
-                                { "last-payment-date", DateTime.Now.AddDays(-10).ToString() }
-                            };
-                        }
-                        if (actionName == "GetNextPaymentDate")
-                        {
-                            context = new Dictionary<string, string> {
-                                { "next-payment-date", DateTime.Now.AddDays(10).ToString() }
-                            };                            
-                        }
+                        var context = getContext != null ? getContext(converseResponse.action) : null;
                         converseResponse = await ConverseAsync(messageId, message, context).ConfigureAwait(false);
                         break;
                     case WitResponseTypes.Error:

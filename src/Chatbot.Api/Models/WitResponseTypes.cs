@@ -1,4 +1,4 @@
-﻿namespace Chatbot.Api.Controllers
+﻿namespace Chatbot.Api.Models
 {
     public enum WitResponseTypes
     {

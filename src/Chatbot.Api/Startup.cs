@@ -8,6 +8,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Chatbot.Api.Controllers;
+using Chatbot.Api.Services;
+using Chatbot.Api.Models;
 
 namespace Chatbot.Api
 {

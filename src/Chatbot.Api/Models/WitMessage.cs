@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
 
-namespace Chatbot.Api.Controllers
+namespace Chatbot.Api.Models
 {
-
     public class WitMessage 
     {
         public string error { get; set; }
