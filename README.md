@@ -1,10 +1,10 @@
 # Chatbot with ASP.NET CORE
 
-Chatbot with ASP.NET CORE is a simple Ai based bot using [wit.ai](https://wit.ai/) as Ai and [twilio](https://www.twilio.com/) for conversation.
+Chatbot with ASP.NET CORE is a simple Ai based bot using [wit.ai](https://wit.ai/) as Ai and [twilio](https://www.twilio.com/) for conversation. 
 
 ### Using:
 
-Set your credintials for [wit.ai](https://wit.ai/) and [twilio](https://www.twilio.com/) on `appsettings.json`
+Set your credintials for [wit.ai](https://wit.ai/), [twilio](https://www.twilio.com/) and [hue api](https://developers.meethue.com)(if you have any hue light, otherwise ignore that part) on `appsettings.json`
 
 ### Usefull links to setup 
 
