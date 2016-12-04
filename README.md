@@ -1,4 +1,4 @@
-# Chatbot with ASP.NET CORE
+# Chatbot with .NET CORE
 
 Chatbot with .NET CORE is a simple Ai based bot using [wit.ai](https://wit.ai/) as Ai and [twilio](https://www.twilio.com/) for conversation. 
 
