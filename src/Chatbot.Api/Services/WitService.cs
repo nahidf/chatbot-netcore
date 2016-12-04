@@ -19,7 +19,7 @@ namespace Chatbot.Api.Services
             _aiSettings = aiSettings.Value;
         }
 
-        public async Task<string> ConverseAsync(string message, Func<string, Dictionary<string, string>> getContext)
+        public async Task<string> ConverseAsync(string message, Func<WitConverseResponse, Task<Dictionary<string, string>>> getContext)
         {
             var messageId = Guid.NewGuid().ToString();
             var converseResponse = await ConverseAsync(messageId, message, null).ConfigureAwait(false);
@@ -34,7 +34,9 @@ namespace Chatbot.Api.Services
                     case WitResponseTypes.Message:
                         return converseResponse.msg;
                     case WitResponseTypes.Action:
-                        var context = getContext != null ? getContext(converseResponse.action) : null;
+                        var context = getContext != null ? 
+                            await getContext(converseResponse).ConfigureAwait(false) :
+                            null;
                         converseResponse = await ConverseAsync(messageId, message, context).ConfigureAwait(false);
                         break;
                     case WitResponseTypes.Error:

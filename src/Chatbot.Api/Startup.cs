@@ -35,9 +35,11 @@ namespace Chatbot.Api
 
             services.AddTransient<TwilioService>();
             services.AddTransient<WitService>();
+            services.AddTransient<HueService>();
 
             services.Configure<SmsSettings>(Configuration.GetSection("SmsSettings"));
             services.Configure<AiSettings>(Configuration.GetSection("AiSettings"));
+            services.Configure<HueSettings>(Configuration.GetSection("HueSettings"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -11,3 +11,4 @@ packages
 *.TMP
 .nuget/NuGet.exe
 wwwroot
+appsettings.production.json
